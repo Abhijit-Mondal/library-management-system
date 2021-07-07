@@ -4,7 +4,8 @@
   "description": "A prototype website to understand the challenges in managing a library through an online portal.",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app"
+    "dev": "nodemon app",
+    "start": "node app"
   },
   "author": "Abhijit Mondal",
   "license": "ISC",

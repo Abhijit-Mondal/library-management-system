@@ -7,9 +7,9 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 
-app.get("/", (req, res)=>{
-    res.render("index", {title: "Matisathi"});
-});
+// Loading home router
+const homeRouter = require("./routes/home");
+app.use("/", homeRouter);
 
 
 
