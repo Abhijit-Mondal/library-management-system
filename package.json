@@ -1,0 +1,15 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "A prototype website to understand the challenges in managing a library through an online portal.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app"
+  },
+  "author": "Abhijit Mondal",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
