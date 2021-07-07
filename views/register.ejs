@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+
+<!-- Content -->
+<header>
+    <h1><%= title %></h1>
+</header>
+
+<section id="user-registration-form">
+
+    <form action="/users" method="post">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="John" required autofocus>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Doe" required autofocus>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="john.doe@gmail.com" required autofocus>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" placeholder="25" required autofocus>
+
+        <label for="genres-preferred">Genres interested in:
+            <span id="genres-selected"></span>
+        </label>
+        <select id="genres-preferred">
+            <option value="">Select One</option>
+           <% genresAvailable.forEach(genre=>{ %>
+                <option value=<%=genre%>><%=genre%></option>
+           <% }); %>
+        </select>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+</section>
+
+
+<%- include("partials/footer.ejs") %>
