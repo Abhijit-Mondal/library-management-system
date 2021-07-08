@@ -1,12 +1,8 @@
 <%- include("partials/header.ejs") %>
 
 <!-- Content -->
-<header>
-    <h1><%= title %></h1>
-</header>
-
 <section id="user-registration-form">
-
+    
     <form action="/users" method="post">
         <label for="first-name">First Name:</label>
         <input type="text" id="first-name" name="first-name" placeholder="John" required autofocus>
@@ -31,9 +27,7 @@
         </select>
 
         <input type="submit" value="Register">
-
     </form>
-
 </section>
 
 

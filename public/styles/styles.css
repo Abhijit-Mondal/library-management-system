@@ -4,7 +4,7 @@
     height: 500px;
 } */
 
-header,footer{
+header,footer, #main-content{
     text-align: center;
 }
 
@@ -12,20 +12,46 @@ header {
     font-weight: bold;
 }
 
+#user-registration-form{
+    background-color: rgb(194, 195, 196);
+    padding: 0.5rem;
+    width: fit-content;
+    margin: 0 auto;
+}
 
-#user-registration-form input, 
-#user-registration-form select, #user-registration-form label {
+#user-registration-form input, select, label {
     display: block;
-    width: 50%;
-    margin: 5px auto 5px;
+    width: 20rem;
+    margin: 0.5rem 2rem;
+    padding: 0.2rem;
+}
+
+#user-registration-form label {
+    text-align: left;
+}
+
+#user-registration-form select {
+    margin: 0.5rem auto;
 }
 
 #user-registration-form input[type="submit"] {
     height: 20px;
     background-color: rgb(36, 222, 247);
-    font-weight: bold;
+    color: #fff;
     border: none;
     margin: 20px auto;
     height: 40px;
     font-size: 30px;
+    cursor: pointer;
 }
+
+#user-registration-form input[type="submit"]:hover {
+    background-color: rgb(12, 96, 107);
+}
+
+#user-registration-form input[type="submit"]:active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
