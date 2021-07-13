@@ -1,37 +1,100 @@
-/* #main-content {
-    background: no-repeat url("../assets/images/library-main.jpg");
-    width: 100%;
-    height: 500px;
-} */
-
-header,footer, #main-content{
+body{
     text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-content{
+    position: relative;
+    min-height: 100vh;
+    background: no-repeat url("../assets/images/library-main.jpg");
+    background-size: cover;
+}
+
+#navbar ul{
+    padding: auto;
+    margin: 0;
+    background-color: rgb(86, 204, 243);
+    list-style: none;
+    border-bottom:2px solid #000;
+}
+
+.navbar-item{
+    display: inline-block;
+    padding: 0.9rem;
+}
+
+.navbar-item a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    padding: 0.6rem;
+}
+
+.navbar-item a:hover{
+    background-color: rgb(5, 102, 131);
+    color:#fff;
 }
 
 header {
     font-weight: bold;
 }
 
-#user-registration-form{
-    background-color: rgb(194, 195, 196);
-    padding: 0.5rem;
-    width: fit-content;
-    margin: 0 auto;
+header h1 {
+    margin: 0;
+    padding: 1rem;
 }
 
-#user-registration-form input, select, label {
+#user-registration-form{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 50vw;
+    margin: 0 auto;
+    text-align: left;
+    position:relative;
+}
+
+#user-registration-form #form-icon img{
+    height: 2rem;
+    position:absolute;
+    right: -0.5rem;
+    top:-0.5rem;
+    
+}
+
+
+#user-registration-form input, #user-registration-form label {
     display: block;
-    width: 20rem;
+    width: 40vw;
     margin: 0.5rem 2rem;
     padding: 0.2rem;
 }
 
-#user-registration-form label {
-    text-align: left;
+#user-registration-form #genres-preferred {
+    list-style: none;
 }
 
-#user-registration-form select {
-    margin: 0.5rem auto;
+#user-registration-form #genres-preferred li {
+    float: left;
+    display: inline;
+}
+
+.clr {
+    clear:both;
+}
+
+#user-registration-form #genres-preferred input {
+    display: inline-block;
+    width: 1rem;
+    margin: 0rem;
+}
+
+#user-registration-form #genres-preferred label {
+    display: inline-block;
+    width: 5rem;
 }
 
 #user-registration-form input[type="submit"] {
@@ -55,3 +118,18 @@ header {
 }
 
 
+footer {
+    clear: both;
+    background-color: black;
+    color: rgb(14, 209, 243);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+}
+
+#main-footer-content {
+    position: relative;
+    padding-top: 0.1rem;
+    margin:auto;
+}

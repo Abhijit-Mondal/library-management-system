@@ -3,6 +3,10 @@
 <!-- Content -->
 <section id="user-registration-form">
     
+    <span id="form-icon">
+        <img src="/assets/images/edit-icon.png"/>
+    </span>
+
     <form action="/users" method="post">
         <label for="first-name">First Name:</label>
         <input type="text" id="first-name" name="first-name" placeholder="John" required autofocus>
@@ -16,15 +20,18 @@
         <label for="age">Age:</label>
         <input type="text" id="age" name="age" placeholder="25" required autofocus>
 
-        <label for="genres-preferred">Genres interested in:
-            <span id="genres-selected"></span>
-        </label>
-        <select id="genres-preferred">
-            <option value="">Select One</option>
-           <% genresAvailable.forEach(genre=>{ %>
-                <option value=<%=genre%>><%=genre%></option>
-           <% }); %>
-        </select>
+
+        <label for="genres-preferred">Genres Preferred:</label>
+        <ul id="genres-preferred">
+            
+                <% genresAvailable.forEach(genre => { %>
+                    <li>
+                        <input type="checkbox" name=<%=genre%> id=<%=genre%>>
+                        <label for=<%=genre%>><%=genre%></label><br/>
+                    </li>
+                <% }); %>
+        </ul>
+        <div class="clr"></div>
 
         <input type="submit" value="Register">
     </form>

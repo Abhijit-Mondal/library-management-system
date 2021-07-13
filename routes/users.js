@@ -24,7 +24,24 @@ router.get("/register", (req, res)=>{
 
 
 router.post("/", (req, res)=>{
-    res.json(req.body);
+    
+    let userObject = {
+        firstName: req.body["first-name"],
+        lastName: req.body["last-name"],
+        email: req.body["email"],
+        age: req.body["age"],
+        genresPreferred: []
+    };
+
+    for(let key in req.body) {
+        if(genres.includes(key) && req.body[key] === "on"){
+            userObject.genresPreferred.push(key);
+        }
+    }
+
+    // userObject = JSON.stringify(userObject);
+
+    res.json(userObject);
 });
 
 
